@@ -50,14 +50,10 @@ fun buyTicket() {
                 purchasedTickets++
                 currentIncome += tPrice
             }
-
         }
-
-
     }
-
-
 }
+
 
 fun printMenu() {
     println("\n1. Show the seats")
@@ -66,11 +62,10 @@ fun printMenu() {
     print("0. Exit\n> ")
 }
 
+
 fun statistics() {
     val percent :Double = 100 * purchasedTickets.toDouble() / totalSeats.toDouble()
     val percentOutput = String.format("%.2f", percent)
-
-
 
     println("\nNumber of purchased tickets: $purchasedTickets")
     println("Percentage: $percentOutput%")
@@ -93,9 +88,6 @@ fun ticketPrice(sr: Int) :Int {
 }
 
 
-
-
-
 fun initCinema() {
     print("Enter the number of rows:\n> ")
     rows = scanner.nextInt()
@@ -111,11 +103,9 @@ fun initCinema() {
         totalIncome = 10 * rows * seats
     } else {
        totalIncome = (10 * (rows/2) * seats) + (8 * (rows - rows/2) * seats)
-
-
     }
-
 }
+
 
 fun printCinema() {
 
